@@ -1,0 +1,14 @@
+<label>Name</label>
+<input ng-model="playersCtrl.newPlayer.name">
+<button ng-click="playersCtrl.addPlayer()">Add Player</button>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  <tr ng-repeat="player in playersCtrl.players">
+    <td ng-bind="player.name"></td>
+    <td><button ng-click="playersCtrl.deletePlayer(player)">Delete</button></td>
+  </tr>
+</table>
